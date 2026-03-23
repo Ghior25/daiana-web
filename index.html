@@ -1,30 +1,39 @@
 <!DOCTYPE html>
-<html lang="es-AR">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Daiana Wawrysczuk — Associate Project Manager en ABB y terapeuta integral en Terapia Consciente. Sesiones online y presenciales en Banfield, Buenos Aires." />
+
+  <meta name="description" content="Daiana Wawrysczuk — Terapeuta Consciente y Project Manager. Sesiones online y presenciales en Banfield, Buenos Aires. Bioneuroemoción, Reiki, Constelaciones familiares y más." />
+  <meta name="keywords" content="terapeuta consciente, trabajo interno, bioneuroemoción, reiki, constelaciones familiares, terapia online, sanación consciente" />
   <meta name="author" content="Daiana Wawrysczuk" />
-  <meta name="theme-color" content="#1E2B3A" />
-
-  <meta property="og:title" content="Daiana Wawrysczuk — Project Manager &amp; Terapeuta Consciente" />
-  <meta property="og:description" content="Integro gestión de proyectos y sanación consciente. Sesiones personalizadas, online y en Banfield, Buenos Aires." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://daiana-web.vercel.app/" />
-  <meta property="og:locale" content="es_AR" />
-  <meta property="og:image" content="https://daiana-web.vercel.app/assets/img/og-image.svg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Daiana Wawrysczuk — Project Manager &amp; Terapeuta Consciente" />
-  <meta name="twitter:description" content="Terapia Consciente y trayectoria corporativa. Banfield y online." />
-  <meta name="twitter:image" content="https://daiana-web.vercel.app/assets/img/og-image.svg" />
-
-  <title>Daiana Wawrysczuk — Project Manager &amp; Terapeuta Consciente</title>
+  <meta name="theme-color" content="#C4856A" />
 
   <link rel="canonical" href="https://daiana-web.vercel.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Daiana Wawrysczuk — Terapeuta Consciente" />
+  <meta property="og:description" content="Acompaño procesos de transformación profunda. Sesiones online y presenciales en Banfield, Buenos Aires." />
+  <meta property="og:url" content="https://daiana-web.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <!-- TODO: reemplazar por una versión JPG específica si querés -->
+  <meta property="og:image" content="https://daiana-web.vercel.app/assets/img/og-image.svg" />
+  <meta property="og:locale" content="es_AR" />
+
+  <!-- Twitter/X Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Daiana Wawrysczuk — Terapeuta Consciente" />
+  <meta name="twitter:description" content="Sesiones de terapia consciente online y en Banfield, Buenos Aires." />
+  <meta name="twitter:image" content="https://daiana-web.vercel.app/assets/img/og-image.svg" />
+
+  <title>Daiana Wawrysczuk — Terapeuta Consciente</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tipografías: títulos y cuerpo -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/animations.css" />
@@ -40,10 +49,11 @@
         <span class="nav-toggle__bar" aria-hidden="true"></span>
         <span class="nav-toggle__bar" aria-hidden="true"></span>
       </button>
-      <nav class="site-nav" id="site-nav" aria-label="Principal">
+      <nav class="site-nav" id="site-nav" role="navigation" aria-label="Navegación principal">
         <ul class="site-nav__list">
           <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li><a href="#terapia">Terapia Consciente</a></li>
+          <li><a href="#terapia">Terapia</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
           <li><a href="#carrera">Carrera</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
@@ -51,33 +61,40 @@
     </div>
   </header>
 
-  <main id="main-content">
+  <a class="sticky-cta" id="sticky-cta" href="#contacto" aria-label="Reservar sesión">Reservar sesión →</a>
+
+  <main id="main-content" role="main">
     <!-- Hero -->
     <section class="hero section" id="hero" aria-labelledby="hero-title">
       <div class="container hero__grid">
         <div class="hero__content reveal">
-          <p class="hero__eyebrow">Bienvenida/o</p>
-          <h1 id="hero-title" class="hero__title">Daiana Wawrysczuk</h1>
-          <p class="hero__tagline">Project Manager · Terapeuta Consciente</p>
-          <p class="hero__lead">
-            Integro la planificación estratégica y la gestión de proyectos con la sanación consciente, para acompañarte en procesos profundos de transformación con contención y claridad.
+          <p class="hero__eyebrow">Contención, claridad y un nuevo comienzo</p>
+          <h1 id="hero-title" class="hero__title">
+            ¿Sentís que algo en tu vida pide cambiar pero no sabés por dónde empezar? Acompaño ese proceso.
+          </h1>
+          <p class="hero__tagline">
+            Terapeuta Consciente y Project Manager: integro mirada emocional, herramientas energéticas y seguimiento humano para sanar con calma.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#contacto">Reservar una sesión</a>
-            <a class="btn btn--ghost" href="#sobre-mi">Conocer mi trabajo</a>
+            <a class="btn btn--primary" href="#contacto">Reservar sesión</a>
+            <a class="btn btn--secondary" href="#terapia">Explorar mi enfoque</a>
           </div>
         </div>
+
         <div class="hero__visual reveal reveal--delay">
           <figure class="hero__figure">
-            <img
-              class="hero__img"
-              src="assets/img/hero-portrait.svg"
-              width="480"
-              height="560"
-              alt="Retrato ilustrativo de Daiana Wawrysczuk. Podés reemplazar esta imagen por una fotografía profesional."
-              loading="eager"
-              decoding="async"
-            />
+            <div class="hero__photo-placeholder" role="group" aria-label="Foto profesional de Daiana Wawrysczuk">
+              <img
+                class="hero__photo-placeholder__img"
+                src="assets/img/perfil_DWC.jpg"
+                width="480"
+                height="560"
+                alt="Foto profesional de Daiana Wawrysczuk"
+                loading="eager"
+                decoding="async"
+              />
+              <figcaption class="hero__photo-placeholder__text">→ reemplazar con foto profesional</figcaption>
+            </div>
           </figure>
         </div>
       </div>
@@ -90,10 +107,10 @@
         <div class="about__content reveal">
           <p class="about__quote">“Acompaño procesos donde lo profesional y lo humano se encuentran.”</p>
           <p>
-            Mi camino combina años de experiencia en entornos <strong class="text-accent">corporativos</strong> —donde aprendí <strong class="text-accent">negociación</strong>, <strong class="text-accent">gestión de proyectos</strong> y <strong class="text-accent">resolución de incidencias</strong>— con un llamado profundo hacia la <strong class="text-accent">terapia integral</strong> y la <strong class="text-accent">sanación consciente</strong>.
+            Mi camino combina años de experiencia en entornos <strong class="text-accent">corporativos</strong> con un llamado profundo hacia la <strong class="text-accent">terapia integral</strong> y la <strong class="text-accent">sanación consciente</strong>.
           </p>
           <p>
-            Hoy ofrezco sesiones de <strong>Terapia Consciente</strong> integrando diversas herramientas, siempre con el foco en lo que necesitás en el momento presente. Trabajo desde <strong>Banfield, Buenos Aires, Argentina</strong>, y acompaño personas de todo el mundo de forma online.
+            Hoy ofrezco Terapia Consciente integrando diversas herramientas, siempre con el foco en lo que necesitás en el momento presente. Trabajo desde <strong>Banfield, Buenos Aires, Argentina</strong> y acompaño personas de todo el mundo de forma online.
           </p>
         </div>
       </div>
@@ -105,18 +122,18 @@
         <header class="section__header reveal">
           <h2 id="therapy-title" class="section__title">Terapia Consciente</h2>
           <p class="section__subtitle">
-            Un espacio de encuentro para sanar, integrar y expandir tu conciencia —con un enfoque respetuoso, espiritual y accesible.
+            Un espacio de encuentro para sanar, integrar y recuperar sentido —con un enfoque respetuoso, espiritual y accesible.
           </p>
         </header>
 
         <div class="therapy__intro reveal">
           <h3 class="therapy__h3">¿Qué es una sesión?</h3>
           <p>
-            Cada encuentro es <strong>único</strong>: escucho tu historia y lo que estás atravesando, y desde ahí definimos qué técnicas conviene integrar. El objetivo es siempre trabajar en la <strong>sanación</strong> de la persona, honrando tu ritmo y tu proceso.
+            Cada encuentro es <strong>único</strong>. Escucho tu historia y lo que estás atravesando, y desde ahí definimos qué técnicas conviene integrar. El objetivo es siempre trabajar en la <strong>sanación</strong>, honrando tu ritmo y tu proceso.
           </p>
         </div>
 
-        <ul class="therapy__facts reveal" role="list">
+        <ul class="therapy__facts reveal" role="list" aria-label="Información práctica de sesiones">
           <li class="therapy-fact">
             <span class="therapy-fact__label">Duración</span>
             <span class="therapy-fact__value">~2 horas <span class="therapy-fact__hint">(puede extenderse según necesidad)</span></span>
@@ -131,21 +148,42 @@
           </li>
         </ul>
 
+        <div class="session-steps reveal" aria-label="Cómo es una sesión">
+          <h3 class="session-steps__title">Cómo es una sesión</h3>
+          <ol class="session-steps__list" role="list">
+            <li class="session-step">
+              <span class="session-step__number" aria-hidden="true">1</span>
+              <span class="session-step__icon" aria-hidden="true">✉</span>
+              <span class="session-step__label">Escribís</span>
+            </li>
+            <li class="session-step">
+              <span class="session-step__number" aria-hidden="true">2</span>
+              <span class="session-step__icon" aria-hidden="true">☺</span>
+              <span class="session-step__label">Nos conocemos</span>
+            </li>
+            <li class="session-step">
+              <span class="session-step__number" aria-hidden="true">3</span>
+              <span class="session-step__icon" aria-hidden="true">✦</span>
+              <span class="session-step__label">Empezamos</span>
+            </li>
+          </ol>
+        </div>
+
         <h3 class="therapy__h3 therapy__h3--spaced reveal">Técnicas que integro</h3>
         <p class="therapy__note reveal">
-          La combinación se define <strong>en la sesión</strong>, según lo que vos necesites en ese momento.
+          La combinación se define en la sesión, según lo que vos necesites en ese momento.
         </p>
 
-        <ul class="therapy-cards" role="list">
+        <ul class="therapy-cards" role="list" aria-label="Técnicas que integro">
           <li class="therapy-card reveal">
             <span class="therapy-card__icon" aria-hidden="true">◈</span>
             <h4 class="therapy-card__title">Bioneuroemoción</h4>
-            <p class="therapy-card__text">Diplomada (Enric Corbera Institute). Trabajo con el vínculo emoción–cuerpo.</p>
+            <p class="therapy-card__text">Diplomada. Trabajo con el vínculo emoción–cuerpo.</p>
           </li>
           <li class="therapy-card reveal">
             <span class="therapy-card__icon" aria-hidden="true">◈</span>
             <h4 class="therapy-card__title">Biodescodificación</h4>
-            <p class="therapy-card__text">Lectura simbólica y coherencia biológica para comprender el mensaje detrás del síntoma.</p>
+            <p class="therapy-card__text">Lectura simbólica para comprender el mensaje detrás del síntoma.</p>
           </li>
           <li class="therapy-card reveal">
             <span class="therapy-card__icon" aria-hidden="true">◈</span>
@@ -181,6 +219,42 @@
 
         <div class="therapy__cta reveal">
           <a class="btn btn--primary" href="#contacto">Quiero agendar mi espacio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonials section section--alt" id="testimonios" aria-labelledby="testimonios-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 id="testimonios-title" class="section__title">Testimonios</h2>
+          <p class="section__subtitle">Palabras de quienes ya comenzaron su proceso.</p>
+        </header>
+
+        <div class="testimonials__grid">
+          <article class="testimonial-card reveal">
+            <p class="testimonial-card__quote">“Sentí contención real. Mis emociones empezaron a ordenarse y logré entender qué necesitaba de verdad.”</p>
+            <div class="testimonial-card__meta">
+              <p class="testimonial-card__name">M.G., Buenos Aires</p>
+              <div class="testimonial-card__stars" aria-label="5 estrellas">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <p class="testimonial-card__quote">“No fue solo una sesión: fue un antes y un después. Me llevo claridad, calma y dirección.”</p>
+            <div class="testimonial-card__meta">
+              <p class="testimonial-card__name">A.R., Online</p>
+              <div class="testimonial-card__stars" aria-label="5 estrellas">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <p class="testimonial-card__quote">“Después de mucho tiempo, pude volver a mí. Me sentí acompañada y escuchada con respeto.”</p>
+            <div class="testimonial-card__meta">
+              <p class="testimonial-card__name">C.L., Banfield</p>
+              <div class="testimonial-card__stars" aria-label="5 estrellas">★★★★★</div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -251,27 +325,20 @@
         <header class="section__header reveal">
           <h2 id="contact-title" class="section__title">Contacto y reserva de sesión</h2>
           <p class="section__subtitle">
-            Completá el formulario para consultas o para coordinar una sesión. Los campos marcados con <span class="required-mark" aria-hidden="true">*</span> son obligatorios.
+            Si estás atravesando un momento difícil, este es tu lugar. Completá el formulario y coordinamos con calma.
           </p>
         </header>
 
-        <!-- Reemplazá YOUR_FORM_ID por el ID que te da Formspree (https://formspree.io) -->
-        <form
-          class="contact-form"
-          id="contact-form"
-          name="contact"
-          action="https://formspree.io/f/YOUR_FORM_ID"
-          method="POST"
-          novalidate
-        >
+        <form class="contact-form" id="contact-form" name="contact" action="https://formspree.io/f/maqpzblj" method="POST" novalidate>
           <input type="hidden" name="_subject" value="Nuevo mensaje desde daiana-web" />
+
           <p class="visually-hidden">
             <label for="website">No completar si sos humano</label>
             <input id="website" type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
           </p>
 
-          <fieldset class="form-fieldset">
-            <legend class="form-legend">Datos personales</legend>
+          <fieldset class="form-fieldset form-fieldset--primary">
+            <legend class="form-legend">Tu reserva</legend>
             <div class="form-row">
               <div class="form-group">
                 <label for="fullName">Nombre completo <span class="required-mark" aria-hidden="true">*</span></label>
@@ -279,88 +346,106 @@
                 <span class="field-error" id="fullName-error" role="alert"></span>
               </div>
               <div class="form-group">
-                <label for="birthDate">Fecha de nacimiento <span class="required-mark" aria-hidden="true">*</span></label>
-                <input id="birthDate" name="birthDate" type="date" required aria-required="true" />
-                <span class="field-error" id="birthDate-error" role="alert"></span>
+                <label for="contactMethod">Email o WhatsApp <span class="required-mark" aria-hidden="true">*</span></label>
+                <input
+                  id="contactMethod"
+                  name="contactMethod"
+                  type="text"
+                  inputmode="email"
+                  autocomplete="email"
+                  placeholder="ej.: nombre@email.com o +54 11 5555-5555"
+                  required
+                  aria-required="true"
+                />
+                <span class="field-error" id="contactMethod-error" role="alert"></span>
               </div>
             </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="email">Email <span class="required-mark" aria-hidden="true">*</span></label>
-                <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required aria-required="true" />
-                <span class="field-error" id="email-error" role="alert"></span>
-              </div>
-              <div class="form-group">
-                <label for="phone">Teléfono <span class="required-mark" aria-hidden="true">*</span></label>
-                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-required="true" />
-                <span class="field-error" id="phone-error" role="alert"></span>
-              </div>
+
+            <div class="form-group form-group--full">
+              <label for="workInterest">¿Qué te gustaría trabajar? <span class="optional">(opcional)</span></label>
+              <textarea id="workInterest" name="workInterest" rows="4" placeholder="Contame brevemente qué estás atravesando…"></textarea>
             </div>
           </fieldset>
 
-          <fieldset class="form-fieldset">
-            <legend class="form-legend">Información adicional <span class="optional">(opcional)</span></legend>
-            <div class="form-group">
-              <label for="howFound">¿Cómo llegaste a mí?</label>
-              <select id="howFound" name="howFound">
-                <option value="">Elegí una opción</option>
-                <option value="instagram">Instagram</option>
-                <option value="facebook">Facebook</option>
-                <option value="linkedin">LinkedIn</option>
-                <option value="recomendacion">Recomendación</option>
-                <option value="google">Búsqueda en Google</option>
-                <option value="otro">Otro</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="howFoundOther">Si elegiste “Otro”, contame cómo</label>
-              <input id="howFoundOther" name="howFoundOther" type="text" autocomplete="off" />
-            </div>
-            <div class="form-group">
-              <label for="city">Ciudad de residencia</label>
-              <input id="city" name="city" type="text" autocomplete="address-level2" />
-            </div>
-          </fieldset>
+          <details class="form-details" id="form-details">
+            <summary class="form-details__summary">Agregar más detalles (opcional)</summary>
+            <div class="form-details__body">
+              <fieldset class="form-fieldset form-fieldset--secondary">
+                <legend class="form-legend">Datos ampliados</legend>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="birthDate">Fecha de nacimiento</label>
+                    <input id="birthDate" name="birthDate" type="date" />
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Teléfono (opcional)</label>
+                    <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" />
+                  </div>
+                </div>
 
-          <fieldset class="form-fieldset">
-            <legend class="form-legend">Disponibilidad <span class="optional">(opcional)</span></legend>
-            <fieldset class="form-subfieldset">
-              <legend class="form-sublegend">Días de la semana disponibles</legend>
-              <div class="checkbox-grid" role="group" aria-label="Días disponibles">
-                <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="Lunes" /> Lunes</label>
-                <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="Martes" /> Martes</label>
-                <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="Miércoles" /> Miércoles</label>
-                <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="Jueves" /> Jueves</label>
-                <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="Viernes" /> Viernes</label>
-                <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="Sábado" /> Sábado</label>
-                <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="Domingo" /> Domingo</label>
-              </div>
-            </fieldset>
-            <fieldset class="form-subfieldset">
-              <legend class="form-sublegend">Horarios preferidos</legend>
-              <div class="checkbox-grid" role="group" aria-label="Franjas horarias preferidas">
-                <label class="checkbox-label"><input type="checkbox" name="timeSlots" value="Mañana" /> Mañana</label>
-                <label class="checkbox-label"><input type="checkbox" name="timeSlots" value="Tarde" /> Tarde</label>
-                <label class="checkbox-label"><input type="checkbox" name="timeSlots" value="Noche" /> Noche</label>
-              </div>
-              <div class="form-group form-group--full">
-                <label for="preferredHoursNotes">Detalle de horarios u otras preferencias</label>
-                <textarea id="preferredHoursNotes" name="preferredHoursNotes" rows="3" placeholder="Ej.: Entre semana después de las 18 hs…"></textarea>
-              </div>
-            </fieldset>
-          </fieldset>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="howFound">¿Cómo llegaste a mí?</label>
+                    <select id="howFound" name="howFound">
+                      <option value="">Elegí una opción</option>
+                      <option value="instagram">Instagram</option>
+                      <option value="facebook">Facebook</option>
+                      <option value="linkedin">LinkedIn</option>
+                      <option value="recomendacion">Recomendación</option>
+                      <option value="google">Búsqueda en Google</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="howFoundOther">Si elegiste “Otro”, contame cómo</label>
+                    <input id="howFoundOther" name="howFoundOther" type="text" autocomplete="off" />
+                  </div>
+                </div>
 
-          <fieldset class="form-fieldset">
-            <legend class="form-legend">Mensaje <span class="optional">(opcional)</span></legend>
-            <div class="form-group">
-              <label for="message">Contame brevemente qué te gustaría trabajar</label>
-              <textarea id="message" name="message" rows="4"></textarea>
+                <div class="form-row">
+                  <div class="form-group form-group--full">
+                    <label for="city">Ciudad de residencia</label>
+                    <input id="city" name="city" type="text" autocomplete="address-level2" />
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="form-fieldset form-fieldset--secondary">
+                <legend class="form-legend">Disponibilidad</legend>
+
+                <div class="form-group">
+                  <p class="form-sublegend">Días de la semana disponibles</p>
+                  <div class="checkbox-grid" role="group" aria-label="Días disponibles">
+                    <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="Lunes" /> Lunes</label>
+                    <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="Martes" /> Martes</label>
+                    <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="Miércoles" /> Miércoles</label>
+                    <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="Jueves" /> Jueves</label>
+                    <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="Viernes" /> Viernes</label>
+                    <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="Sábado" /> Sábado</label>
+                    <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="Domingo" /> Domingo</label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <p class="form-sublegend">Horarios preferidos</p>
+                  <div class="checkbox-grid" role="group" aria-label="Franjas horarias preferidas">
+                    <label class="checkbox-label"><input type="checkbox" name="timeSlots" value="Mañana" /> Mañana</label>
+                    <label class="checkbox-label"><input type="checkbox" name="timeSlots" value="Tarde" /> Tarde</label>
+                    <label class="checkbox-label"><input type="checkbox" name="timeSlots" value="Noche" /> Noche</label>
+                  </div>
+
+                  <div class="form-group form-group--full">
+                    <label for="preferredHoursNotes">Detalle de horarios u otras preferencias</label>
+                    <textarea id="preferredHoursNotes" name="preferredHoursNotes" rows="3" placeholder="Ej.: Después de las 18 hs…"></textarea>
+                  </div>
+                </div>
+              </fieldset>
             </div>
-          </fieldset>
+          </details>
 
           <div class="form-actions">
             <button type="submit" class="btn btn--primary" id="form-submit">
-              <span class="btn__label">Enviar solicitud</span>
+              <span class="btn__label">Quiero mi espacio</span>
               <span class="btn__loading visually-hidden" aria-hidden="true">Enviando…</span>
             </button>
           </div>
@@ -384,9 +469,10 @@
       <div class="site-footer__links">
         <a
           class="site-footer__link"
-          href="https://www.linkedin.com/in/REEMPLAZAR_PERFIL"
+          href="https://www.linkedin.com/in/daiana-wawrysczuk-9939b1ba/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="LinkedIn de Daiana Wawrysczuk"
         >
           <span class="site-footer__icon" aria-hidden="true">in</span>
           LinkedIn
@@ -406,5 +492,23 @@
 
   <script src="js/main.js" defer></script>
   <script src="js/form.js" defer></script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Daiana Wawrysczuk",
+      "jobTitle": "Terapeuta Consciente y Project Manager",
+      "url": "https://daiana-web.vercel.app",
+      "address": {
+        "addressRegion": "Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/daiana-wawrysczuk-9939b1ba/"
+      ],
+      "description": "Terapeuta Consciente integrando Bioneuroemoción, Reiki, Constelaciones familiares y más. Sesiones online y presenciales."
+    }
+  </script>
 </body>
 </html>

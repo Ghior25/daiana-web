@@ -74,6 +74,26 @@
     yearEl.textContent = String(new Date().getFullYear());
   }
 
+  /* CTA sticky (mobile): ocultar cuando ya estamos en #contacto */
+  var stickyCta = document.getElementById("sticky-cta");
+  var contactSection = document.getElementById("contacto");
+  if (stickyCta && contactSection && window.IntersectionObserver) {
+    var stickyObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            stickyCta.classList.add("is-hidden");
+          } else {
+            stickyCta.classList.remove("is-hidden");
+          }
+        });
+      },
+      { root: null, threshold: 0.2 }
+    );
+
+    stickyObserver.observe(contactSection);
+  }
+
   /* Intersection Observer para .reveal */
   var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var revealEls = document.querySelectorAll(".reveal");

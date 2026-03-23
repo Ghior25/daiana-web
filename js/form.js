@@ -14,20 +14,15 @@
 
   var requiredFields = [
     { id: "fullName", name: "Nombre completo" },
-    { id: "birthDate", name: "Fecha de nacimiento" },
-    { id: "email", name: "Email" },
-    { id: "phone", name: "Teléfono" },
+    { id: "contactMethod", name: "Email o WhatsApp" },
   ];
 
   function setFeedback(type, message) {
     if (!feedback) return;
-    feedback.textContent = message;
+    feedback.textContent = message || "";
     feedback.classList.remove("is-success", "is-error");
-    if (type === "success") {
-      feedback.classList.add("is-success");
-    } else if (type === "error") {
-      feedback.classList.add("is-error");
-    }
+    if (type === "success") feedback.classList.add("is-success");
+    if (type === "error") feedback.classList.add("is-error");
   }
 
   function clearFieldErrors() {
@@ -57,6 +52,16 @@
     return re.test(String(value).trim());
   }
 
+  function validateContactMethod(value) {
+    var v = String(value || "").trim();
+    if (!v) return false;
+    if (v.indexOf("@") !== -1) return validateEmail(v);
+
+    // WhatsApp: validar que tenga al menos 7 dígitos (acepta +, espacios y guiones)
+    var digits = v.replace(/\D/g, "");
+    return digits.length >= 7;
+  }
+
   function validate() {
     clearFieldErrors();
     var ok = true;
@@ -68,12 +73,16 @@
       if (!v) {
         showFieldError(f.id, "Completá " + f.name.toLowerCase() + ".");
         ok = false;
+        return;
       }
     });
 
-    var email = document.getElementById("email");
-    if (email && email.value.trim() && !validateEmail(email.value)) {
-      showFieldError("email", "Ingresá un email válido.");
+    var cm = document.getElementById("contactMethod");
+    if (cm && cm.value.trim() && !validateContactMethod(cm.value)) {
+      showFieldError(
+        "contactMethod",
+        "Ingresá un email válido o un número de WhatsApp."
+      );
       ok = false;
     }
 
@@ -83,16 +92,16 @@
   function setLoading(loading) {
     if (!submitBtn) return;
     submitBtn.disabled = loading;
-    if (labelEl && loadingEl) {
-      if (loading) {
-        labelEl.classList.add("visually-hidden");
-        loadingEl.classList.remove("visually-hidden");
-        loadingEl.setAttribute("aria-hidden", "false");
-      } else {
-        labelEl.classList.remove("visually-hidden");
-        loadingEl.classList.add("visually-hidden");
-        loadingEl.setAttribute("aria-hidden", "true");
-      }
+    if (!labelEl || !loadingEl) return;
+
+    if (loading) {
+      labelEl.classList.add("visually-hidden");
+      loadingEl.classList.remove("visually-hidden");
+      loadingEl.setAttribute("aria-hidden", "false");
+    } else {
+      labelEl.classList.remove("visually-hidden");
+      loadingEl.classList.add("visually-hidden");
+      loadingEl.setAttribute("aria-hidden", "true");
     }
   }
 
@@ -106,11 +115,8 @@
     }
 
     var action = form.getAttribute("action") || "";
-    if (action.indexOf("YOUR_FORM_ID") !== -1) {
-      setFeedback(
-        "error",
-        "Falta configurar Formspree: en index.html reemplazá YOUR_FORM_ID en la URL del formulario por el ID de tu formulario."
-      );
+    if (!action) {
+      setFeedback("error", "Falta configuración del endpoint de Formspree.");
       return;
     }
 
@@ -122,34 +128,25 @@
       days.push(cb.value);
     });
     formData.delete("daysAvailable");
-    if (days.length) {
-      formData.append("daysAvailable", days.join(", "));
-    }
+    if (days.length) formData.append("daysAvailable", days.join(", "));
 
     var slots = [];
     form.querySelectorAll('input[name="timeSlots"]:checked').forEach(function (cb) {
       slots.push(cb.value);
     });
     formData.delete("timeSlots");
-    if (slots.length) {
-      formData.append("timeSlots", slots.join(", "));
-    }
+    if (slots.length) formData.append("timeSlots", slots.join(", "));
 
     setLoading(true);
 
     fetch(action, {
       method: "POST",
       body: formData,
-      headers: {
-        Accept: "application/json",
-      },
+      headers: { Accept: "application/json" },
     })
       .then(function (response) {
         if (response.ok) {
-          setFeedback(
-            "success",
-            "¡Gracias! Tu mensaje fue enviado. Te responderé a la brevedad."
-          );
+          setFeedback("success", "¡Gracias! Tu mensaje fue enviado. Te responderé a la brevedad.");
           form.reset();
           clearFieldErrors();
           return;
@@ -163,10 +160,7 @@
         });
       })
       .catch(function () {
-        setFeedback(
-          "error",
-          "Hubo un error al enviar. Verificá tu conexión o intentá más tarde."
-        );
+        setFeedback("error", "Hubo un error al enviar. Verificá tu conexión o intentá más tarde.");
       })
       .finally(function () {
         setLoading(false);
