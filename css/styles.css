@@ -1116,3 +1116,236 @@ a:focus-visible {
   opacity: 0.75;
   text-align: center;
 }
+
+/* ==========================================================================
+   Coaching redesign overrides
+   ========================================================================== */
+
+:root {
+  --color-text: #2c3e50;
+  --color-text-muted: #7f8c8d;
+  --color-primary: #2c3e50;
+  --color-accent: #E8836A;
+  --color-accent-hover: #d56f56;
+  --color-bg: #F7F5F2;
+  --color-bg-alt: #fdfcfb;
+  --color-card: #fff8f4;
+  --color-border: rgba(44, 62, 80, 0.16);
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Lato", "Open Sans", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+}
+
+h1,
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+}
+
+.site-logo {
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 0.06em;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.section__subtitle {
+  font-size: 1.2rem;
+  line-height: 1.65;
+}
+
+.site-header {
+  background: rgba(247, 245, 242, 0.86);
+  backdrop-filter: blur(6px);
+  box-shadow: none;
+}
+
+.site-header.is-scrolled {
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(44, 62, 80, 0.12);
+}
+
+.btn {
+  font-weight: 700;
+}
+
+.btn--primary {
+  background: #7A9E9F;
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: #678b8c;
+  transform: scale(1.03);
+  box-shadow: 0 0 0 4px rgba(232, 131, 106, 0.15), 0 10px 24px rgba(232, 131, 106, 0.28);
+}
+
+.btn--secondary {
+  border-color: var(--color-accent);
+}
+
+.btn__arrow {
+  display: inline-block;
+  transition: transform var(--transition);
+}
+
+.btn:hover .btn__arrow {
+  transform: translateX(4px);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero__parallax {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(rgba(247, 245, 242, 0.82), rgba(247, 245, 242, 0.86)),
+    url("../assets/img/Coaching-Example-Dana-Stevens.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: translateY(var(--parallaxY, 0px));
+  will-change: transform;
+}
+
+.hero__title {
+  max-width: 18ch;
+}
+
+.hero__tagline {
+  font-size: 1.2rem;
+  max-width: 42ch;
+}
+
+.therapy-fact__value,
+.session-step__label,
+.testimonial-card__name,
+.stat-card__label {
+  font-size: 1.08rem;
+}
+
+.testimonials-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonials-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.testimonial-card {
+  min-width: 100%;
+}
+
+@media (min-width: 900px) {
+  .testimonial-card {
+    min-width: 100%;
+  }
+}
+
+.testimonials-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #c9c9c9;
+}
+
+.dot.is-active {
+  background: var(--color-accent);
+}
+
+.stats-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stat-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.stat-card__number {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.faq-item {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 1rem 1.1rem;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.faq-answer p {
+  padding: 0 1.1rem 1rem;
+  color: var(--color-text-muted);
+}
+
+.faq-item.is-open .faq-answer {
+  max-height: 180px;
+}

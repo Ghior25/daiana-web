@@ -13,7 +13,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Daiana Wawrysczuk — Terapeuta Consciente" />
-  <meta property="og:description" content="Acompaño procesos de transformación profunda. Sesiones online y presenciales en Banfield, Buenos Aires." />
+  <meta property="og:description" content="Acompaño procesos de transformación profunda. Sesiones online y presenciales." />
   <meta property="og:url" content="https://daiana-web.vercel.app/" />
   <meta property="og:type" content="website" />
   <!-- TODO: reemplazar por una versión JPG específica si querés -->
@@ -23,7 +23,7 @@
   <!-- Twitter/X Cards -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Daiana Wawrysczuk — Terapeuta Consciente" />
-  <meta name="twitter:description" content="Sesiones de terapia consciente online y en Banfield, Buenos Aires." />
+  <meta name="twitter:description" content="Sesiones de terapia consciente online y presenciales." />
   <meta name="twitter:image" content="https://daiana-web.vercel.app/assets/img/og-image.svg" />
 
   <title>Daiana Wawrysczuk — Terapeuta Consciente</title>
@@ -32,8 +32,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- Tipografías: títulos y cuerpo -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Lato:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/animations.css" />
@@ -54,7 +54,7 @@
           <li><a href="#sobre-mi">Sobre mí</a></li>
           <li><a href="#terapia">Terapia</a></li>
           <li><a href="#testimonios">Testimonios</a></li>
-          <li><a href="#carrera">Carrera</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
@@ -66,18 +66,19 @@
   <main id="main-content" role="main">
     <!-- Hero -->
     <section class="hero section" id="hero" aria-labelledby="hero-title">
+      <div class="hero__parallax" id="hero-parallax" aria-hidden="true"></div>
       <div class="container hero__grid">
         <div class="hero__content reveal">
           <p class="hero__eyebrow">Contención, claridad y un nuevo comienzo</p>
           <h1 id="hero-title" class="hero__title">
-            ¿Sentís que algo en tu vida pide cambiar pero no sabés por dónde empezar? Acompaño ese proceso.
+            ¿Sentís que algo en tu vida pide cambiar pero no sabés por dónde empezar? Te acompaño en tu proceso.
           </h1>
           <p class="hero__tagline">
-            Terapeuta Consciente y Project Manager: integro mirada emocional, herramientas energéticas y seguimiento humano para sanar con calma.
+            Terapeuta Consciente: integro mirada emocional, herramientas energéticas y seguimiento humano para sanar con calma.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#contacto">Reservar sesión</a>
-            <a class="btn btn--secondary" href="#terapia">Explorar mi enfoque</a>
+            <a class="btn btn--primary" href="#contacto">Reservar sesión <span class="btn__arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn--secondary" href="#terapia">Explorar mi enfoque <span class="btn__arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
 
@@ -110,7 +111,7 @@
             Mi camino combina años de experiencia en entornos <strong class="text-accent">corporativos</strong> con un llamado profundo hacia la <strong class="text-accent">terapia integral</strong> y la <strong class="text-accent">sanación consciente</strong>.
           </p>
           <p>
-            Hoy ofrezco Terapia Consciente integrando diversas herramientas, siempre con el foco en lo que necesitás en el momento presente. Trabajo desde <strong>Banfield, Buenos Aires, Argentina</strong> y acompaño personas de todo el mundo de forma online.
+            Hoy ofrezco Terapia Consciente integrando diversas herramientas, siempre con el foco en lo que necesitás en el momento presente. Trabajo desde <strong>Buenos Aires (Argentina)</strong> y acompaño personas de todo el mundo de forma online.
           </p>
         </div>
       </div>
@@ -136,15 +137,15 @@
         <ul class="therapy__facts reveal" role="list" aria-label="Información práctica de sesiones">
           <li class="therapy-fact">
             <span class="therapy-fact__label">Duración</span>
-            <span class="therapy-fact__value">~2 horas <span class="therapy-fact__hint">(puede extenderse según necesidad)</span></span>
+            <span class="therapy-fact__value">2 horas <span class="therapy-fact__hint">(puede extenderse según necesidad)</span></span>
           </li>
           <li class="therapy-fact">
             <span class="therapy-fact__label">Frecuencia sugerida</span>
-            <span class="therapy-fact__value">Cada 30 días o más <span class="therapy-fact__hint">(se trabaja mucha energía)</span></span>
+            <span class="therapy-fact__value">Cada 30 días o más </span>
           </li>
           <li class="therapy-fact">
             <span class="therapy-fact__label">Modalidad</span>
-            <span class="therapy-fact__value">Online (mundial) y presencial en <strong>Banfield, Buenos Aires</strong></span>
+            <span class="therapy-fact__value">Online y presencial en <strong> Buenos Aires</strong></span>
           </li>
         </ul>
 
@@ -218,7 +219,7 @@
         </ul>
 
         <div class="therapy__cta reveal">
-          <a class="btn btn--primary" href="#contacto">Quiero agendar mi espacio</a>
+          <a class="btn btn--primary" href="#contacto">Quiero agendar mi espacio <span class="btn__arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -231,90 +232,110 @@
           <p class="section__subtitle">Palabras de quienes ya comenzaron su proceso.</p>
         </header>
 
-        <div class="testimonials__grid">
-          <article class="testimonial-card reveal">
-            <p class="testimonial-card__quote">“Sentí contención real. Mis emociones empezaron a ordenarse y logré entender qué necesitaba de verdad.”</p>
-            <div class="testimonial-card__meta">
-              <p class="testimonial-card__name">M.G., Buenos Aires</p>
-              <div class="testimonial-card__stars" aria-label="5 estrellas">★★★★★</div>
-            </div>
-          </article>
+        <div class="testimonials-slider reveal" id="testimonials-slider">
+          <div class="testimonials-track" id="testimonials-track">
+            <article class="testimonial-card">
+              <p class="testimonial-card__quote">“Sentí contención real. Mis emociones empezaron a ordenarse y logré entender qué necesitaba de verdad.”</p>
+              <div class="testimonial-card__meta">
+                <p class="testimonial-card__name">M.G., Buenos Aires</p>
+                <div class="testimonial-card__stars" aria-label="5 estrellas">★★★★★</div>
+              </div>
+            </article>
 
-          <article class="testimonial-card reveal">
-            <p class="testimonial-card__quote">“No fue solo una sesión: fue un antes y un después. Me llevo claridad, calma y dirección.”</p>
-            <div class="testimonial-card__meta">
-              <p class="testimonial-card__name">A.R., Online</p>
-              <div class="testimonial-card__stars" aria-label="5 estrellas">★★★★★</div>
-            </div>
-          </article>
+            <article class="testimonial-card">
+              <p class="testimonial-card__quote">“No fue solo una sesión: fue un antes y un después. Me llevo claridad, calma y dirección.”</p>
+              <div class="testimonial-card__meta">
+                <p class="testimonial-card__name">A.R., Online</p>
+                <div class="testimonial-card__stars" aria-label="5 estrellas">★★★★★</div>
+              </div>
+            </article>
 
-          <article class="testimonial-card reveal">
-            <p class="testimonial-card__quote">“Después de mucho tiempo, pude volver a mí. Me sentí acompañada y escuchada con respeto.”</p>
-            <div class="testimonial-card__meta">
-              <p class="testimonial-card__name">C.L., Banfield</p>
-              <div class="testimonial-card__stars" aria-label="5 estrellas">★★★★★</div>
-            </div>
+            <article class="testimonial-card">
+              <p class="testimonial-card__quote">“Después de mucho tiempo, pude volver a mí. Me sentí acompañada y escuchada con respeto.”</p>
+              <div class="testimonial-card__meta">
+                <p class="testimonial-card__name">C.L., Banfield</p>
+                <div class="testimonial-card__stars" aria-label="5 estrellas">★★★★★</div>
+              </div>
+            </article>
+          </div>
+          <div class="testimonials-dots" id="testimonials-dots" aria-label="Navegación de testimonios">
+            <button type="button" class="dot is-active" data-slide="0" aria-label="Ver testimonio 1"></button>
+            <button type="button" class="dot" data-slide="1" aria-label="Ver testimonio 2"></button>
+            <button type="button" class="dot" data-slide="2" aria-label="Ver testimonio 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Estadísticas -->
+    <section class="stats section" id="estadisticas" aria-labelledby="stats-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 id="stats-title" class="section__title">Resultados del acompañamiento</h2>
+          <p class="section__subtitle">Números que reflejan compromiso, continuidad y transformación.</p>
+        </header>
+
+        <div class="stats-grid reveal" id="stats-grid">
+          <article class="stat-card">
+            <p class="stat-card__number"><span class="counter" data-target="200">0</span>+</p>
+            <p class="stat-card__label">clientes acompañados</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-card__number"><span class="counter" data-target="5">0</span> años</p>
+            <p class="stat-card__label">de experiencia</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-card__number"><span class="counter" data-target="98">0</span>%</p>
+            <p class="stat-card__label">de satisfacción</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Carrera profesional -->
-    <section class="career section section--alt" id="carrera" aria-labelledby="career-title">
+    <!-- FAQ -->
+    <section class="faq section section--alt" id="faq" aria-labelledby="faq-title">
       <div class="container">
         <header class="section__header reveal">
-          <h2 id="career-title" class="section__title">Carrera profesional</h2>
-          <p class="section__subtitle">Experiencia corporativa, formación académica y habilidades que aplico día a día.</p>
+          <h2 id="faq-title" class="section__title">Preguntas frecuentes</h2>
+          <p class="section__subtitle">Respuestas breves para ayudarte a dar el primer paso.</p>
         </header>
 
-        <div class="career__layout">
-          <div class="career__column reveal">
-            <h3 class="career__h3">Experiencia en ABB</h3>
-            <ol class="timeline" role="list">
-              <li class="timeline__item">
-                <span class="timeline__date">Actualidad · ~2 años</span>
-                <h4 class="timeline__title">Associate Project Manager</h4>
-                <p class="timeline__text">Gestión y coordinación de proyectos, alineación de equipos y seguimiento de entregables.</p>
-              </li>
-              <li class="timeline__item">
-                <span class="timeline__date">Anterior</span>
-                <h4 class="timeline__title">Planning &amp; Fulfillment Specialist</h4>
-                <p class="timeline__text">Planificación operativa y cumplimiento, optimización de flujos y comunicación con stakeholders.</p>
-              </li>
-              <li class="timeline__item">
-                <span class="timeline__date">Anterior</span>
-                <h4 class="timeline__title">Operations Support</h4>
-                <p class="timeline__text">Soporte a operaciones, resolución de incidencias y acompañamiento a equipos.</p>
-              </li>
-            </ol>
-          </div>
+        <div class="faq-list reveal">
+          <article class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              ¿Cómo sé si este espacio es para mí?
+            </button>
+            <div class="faq-answer">
+              <p>Si sentís bloqueo, confusión o necesidad de cambio, podemos explorarlo juntas en una primera sesión.</p>
+            </div>
+          </article>
 
-          <div class="career__column reveal">
-            <h3 class="career__h3">Educación y formación</h3>
-            <ul class="career-list" role="list">
-              <li class="career-list__item">
-                <strong>UCEMA</strong> — Posgrado en Estrategia y Gestión de Customer Experience <span class="career-list__meta">(en curso, ene 2026 – nov 2026)</span>
-              </li>
-              <li class="career-list__item">
-                <strong>Enric Corbera Institute</strong> — Bioneuroemoción (diplomada)
-              </li>
-            </ul>
+          <article class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              ¿Cuánto dura cada encuentro?
+            </button>
+            <div class="faq-answer">
+              <p>La duración aproximada es de 2 horas, con posibilidad de extendernos si el proceso lo requiere.</p>
+            </div>
+          </article>
 
-            <h3 class="career__h3 career__h3--spaced">Idiomas</h3>
-            <ul class="career-list career-list--inline" role="list">
-              <li>Español — nativo</li>
-              <li>Alemán — básico</li>
-            </ul>
+          <article class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              ¿Las sesiones son online o presenciales?
+            </button>
+            <div class="faq-answer">
+              <p>Ambas modalidades: online para todo el mundo y presencial en Buenos Aires.</p>
+            </div>
+          </article>
 
-            <h3 class="career__h3 career__h3--spaced">Skills profesionales</h3>
-            <ul class="skill-tags" role="list">
-              <li class="skill-tags__item">Negociación</li>
-              <li class="skill-tags__item">Gestión de proyectos</li>
-              <li class="skill-tags__item">Resolución de incidencias</li>
-              <li class="skill-tags__item">Comunicación</li>
-              <li class="skill-tags__item">Orientación al cliente</li>
-            </ul>
-          </div>
+          <article class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              ¿Qué técnicas se utilizan?
+            </button>
+            <div class="faq-answer">
+              <p>La combinación se define según tu proceso: Bioneuroemoción, Reiki, Biodescodificación, Constelaciones y más.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -446,6 +467,7 @@
           <div class="form-actions">
             <button type="submit" class="btn btn--primary" id="form-submit">
               <span class="btn__label">Quiero mi espacio</span>
+              <span class="btn__arrow" aria-hidden="true">→</span>
               <span class="btn__loading visually-hidden" aria-hidden="true">Enviando…</span>
             </button>
           </div>
